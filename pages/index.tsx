@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
-import Hero from '../components/container/homepage/Hero'
-import Flow from '../components/container/homepage/Flow'
-import Kategori from '../components/container/homepage/Kategori'
-import Fitur from '../components/container/homepage/Fitur'
-import FiturUnggulan from '../components/container/homepage/FiturUnggulan'
-import BuyAlert from '../components/container/homepage/BuyAlert'
-import Katalog from '../components/container/homepage/Katalog'
-import Harga from '../components/container/homepage/Harga'
-import Testi from '../components/container/homepage/Testi'
+import Hero from '@c/components/homepage/Hero'
+import Flow from '@c/components/homepage/Flow'
+import Kategori from '@c/components/homepage/Kategori'
+import Fitur from '@c/components/homepage/Fitur'
+import FiturUnggulan from '@c/components/homepage/FiturUnggulan'
+import BuyAlert from '@c/components/homepage/BuyAlert'
+import Katalog from '@c/components/homepage/Katalog'
+import Harga from '@c/components/homepage/Harga'
+import Testi from '@c/components/homepage/Testi'
 
 const Home: NextPage = () => {
   return (

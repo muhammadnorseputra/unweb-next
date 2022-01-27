@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
-import { IconMoon, IconSun } from '../atoms/Icons'
 import Link from 'next/link'
-
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
+import { IconMoon, IconSun, IconQr, IconMenu } from '@a/components/Icons'
+import { motion } from "framer-motion";
 
 
 export default function Navbar() {
@@ -50,37 +50,39 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li>
-                    	<Link href="/about">
+                    	<Link href="/about-me" as="Tentang Kami">
                         	<a className="text-black dark:text-white font-asap transition duration-200 ease-in px-5 py-7 font-bold hover:text-gray-300 dark:hover:text-gray-400">Tentang Kami</a>
                         </Link>
                     </li>
                     <li>
-                        <a href="#testimonials" className="text-black dark:text-white font-asap transition duration-200 ease-in px-5 py-7 font-bold hover:text-gray-300 dark:hover:text-gray-400">Testimonial</a>
+                        <Link href="/#testimonials" scroll={false}>
+                            <a className="text-black dark:text-white font-asap transition duration-200 ease-in px-5 py-7 font-bold hover:text-gray-300 dark:hover:text-gray-400">Testimonial</a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#price-list" className="text-black dark:text-white font-asap transition duration-200 ease-in px-5 py-7 font-bold hover:text-gray-300 dark:hover:text-gray-400">Harga</a>
+                        <Link href="/#price-list" scroll={false}>
+                            <a className="text-black dark:text-white font-asap transition duration-200 ease-in px-5 py-7 font-bold hover:text-gray-300 dark:hover:text-gray-400">Harga</a>
+                        </Link>
                     </li>
                 </ul>
             </div>
             <div className="flex justify-between items-center">
                 <div className="mr-3">
                     <button onClick={switchTheme} type="button" className="border-2 border-b-4 border-black p-2 rounded-md dark:border-pink-500">
+                        <motion.div whileHover={{scale: 1.2, rotate: -90}}>
                         {theme === 'dark' ? <IconSun /> : <IconMoon />}
+                        </motion.div>
                     </button>
                 </div>
                 <div className="hidden lg:block">
                     <a href="#" className="font-asap rounded-md px-3 py-2 text-center flex border-2 border-b-4 text-black dark:text-white border-black dark:border-pink-500">
                         Isi Blanko
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-                        </svg>
+                        <IconQr />
                     </a>
                 </div>
                 <div className="lg:hidden block">
                     <button className="rounded-md px-3 py-2 text-center flex border-2 border-b-4 text-black dark:text-white border-black dark:border-pink-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd" />
-                        </svg>
+                        <IconMenu />
                     </button>
                 </div>
             </div>

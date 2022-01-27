@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl":  ".",
+    "paths": {
+       "@a/components/*": ["components/atoms/*"],
+	     "@c/components/*": ["components/container/*"],
+       "@l/components/*": ["components/layouts/*"],
+       "@m/components/*": ["components/molecules/*"],
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

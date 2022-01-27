@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { HeartIcon } from '@heroicons/react/solid'
+
 const Footer = () => {
 	return (
 			<>
@@ -5,26 +8,40 @@ const Footer = () => {
 			    <footer className="mt-20">
 			      <div className="container mx-auto">
 			        <div className="flex w-full justify-center mb-8">
-			            <a href="#" className="font-bold inline-flex flex-col items-center justify-center text-center group">
+			        	<Link href="/">
+			            <a className="font-bold inline-flex flex-col items-center justify-center text-center group">
 			                <span className="p-2 border-2 border-b-4 border-pink-300 rounded-md mr-2 text-2xl dark:border-pink-500 mb-2 text-white bg-gradient-to-br from-pink-400 to-pink-200 rotate-12 group-hover:from-pink-200 group-hover:to-pink-400">U</span>
 			                <span className="dark:text-white font-lora">UNWEB.ID <br /> <b className="text-sm text-gray-400 font-light font-asap">Undangan Website Online</b></span>
 			            </a>
+			            </Link>
 			        </div>
 			        <div className="flex w-full justify-center mb-10">
 			            <ul className="font-asap">
 			                <li className="lg:space-x-10 grid grid-cols-2 sm:grid-cols-3 lg:inline-flex gap-x-20 lg:gap-x-3">
-			                    <a href="#" className="text-gray-500 hover:underline dark:text-gray-600">Trims Of Service</a>
-			                    <a href="#" className="text-gray-500 hover:underline dark:text-gray-600">Kebijakan Privacy</a>
-			                    <a href="#" className="text-gray-500 hover:underline dark:text-gray-600">Sitemap</a>
-			                    <a href="#" className="text-gray-500 hover:underline dark:text-gray-600">Cara Order</a>
-			                    <a href="#" className="text-gray-500 hover:underline dark:text-gray-600">FAQ</a>
-			                    <a href="#" className="text-gray-500 hover:underline dark:text-gray-600">Tentang Kami</a>
+			                    <Link href="#">
+			                    	<a className="text-gray-500 hover:underline dark:text-gray-600">Trims Of Service</a>
+			                    </Link>
+			                    <Link href="#">
+			                    	<a className="text-gray-500 hover:underline dark:text-gray-600">Kebijakan Privacy</a>
+			                    </Link>
+			                    <Link href="#">
+			                    	<a className="text-gray-500 hover:underline dark:text-gray-600">Sitemap</a>
+								</Link>
+			                    <Link href="/page/order" as="Cara Order Undangan">
+			                    	<a className="text-gray-500 hover:underline dark:text-gray-600">Cara Order</a>
+			                    </Link>
+			                    <Link href="/page/faq" as="Frequently Asked Questions">
+			                    	<a className="text-gray-500 hover:underline dark:text-gray-600">FAQ</a>
+								</Link>
+			                    <Link href="/about-me" as="Tentang Kami">
+			                    	<a className="text-gray-500 hover:underline dark:text-gray-600">Tentang Kami</a>
+			                    </Link>
 			                </li>
 			            </ul>
 			        </div>
 			        <div className="flex w-full flex-col lg:flex-row justify-between items-center lg:mb-10 gap-y-8 lg:gap-y-0">
 			          <div className="text-gray-400 dark:text-gray-300 w-full inline-flex justify-center lg:justify-start font-lora">
-			              &copy; 2021 <span className="hidden lg:block mx-2">unweb.id </span> Made with <img src="/assets/svg/love.svg" className="w-5 lg:w-4 mx-1" alt="love from indonesia" /> from indonesia.
+			              &copy; 2021 <span className="hidden lg:block mx-2">unweb.id </span> Made with <HeartIcon className="w-5 lg:w-4 mx-1 animate-pulse fill-red-500" /> from indonesia.
 			          </div>
 			          <div>
 			              <ul>
