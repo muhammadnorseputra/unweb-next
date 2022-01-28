@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 import { HeartIcon, CollectionIcon, ChatAltIcon } from '@heroicons/react/solid'
 
@@ -11,10 +12,10 @@ export default function Hero () {
 		        <div className="absolute inset-0 z-10 w-screen h-full bg-gradient-to-b from-white/80 xl:from-white/30 to-sky-50 dark:from-slate-800/90 dark:to-slate-900 filter backdrop-blur-2xl xl:backdrop-blur-xl dark:backdrop-blur-none"></div>
 		        <div className="container mx-auto flex lg:flex-row flex-col items-center justify-between z-20 relative">
 		            <div className="sm:pr-20 mb-10 xl:mb-0">
-		                <p className="flex items-center text-black dark:text-white font-asap select-none mb-5">
+		                <motion.p initial={{opacity: 0, translateY: -50}} animate={{opacity: 1, translateY: 0}} className="flex items-center text-black dark:text-white font-asap select-none mb-5">
 		                    <HeartIcon className="h-6 w-6 mr-2 animate-pulse fill-red-500" />
 		                    Hi, Selamat datang di unweb.id
-		                </p>
+		                </motion.p>
 		                <h1 className="group text-3xl sm:text-4xl md:text-5xl capitalize font-bold font-black leading-normal lg:leading-snug text-gray-800 dark:text-white font-asap select-none">
 		                    Buat <span className="group-hover:underline decoration-[6px] underline-offset-8 text-pink-800 animate-pulse">undangan pernikahan</span> <br />
 		                    jadi lebih mudah dan praktis.
@@ -39,7 +40,7 @@ export default function Hero () {
 		                </div>
 		            </div>
 		            <div className="flex-grow w-full md:w-8/12 xl:w-6/12">
-		                <div className="flex flex-col rounded-xl xl:h-96 overflow-hidden border-2 border-white dark:border-gray-300 transition duration-150 cursor-pointer transition duration-150 ease-linear drop-shadow md:hover:-translate-y-2 md:drop-shadow-2xl md:hover:drop-shadow-3xl bg-gradient-to-t from-white dark:from-slate-800 group">
+		                <motion.div initial={{opacity: 0.6, scale: 0.90, translateY: 50}} transition={{duration: 0.3}} animate={{opacity: 1, scale: 1, translateY: 0}} className="flex flex-col rounded-xl xl:h-96 overflow-hidden border-2 border-white dark:border-gray-300 transition duration-150 cursor-pointer transition duration-150 ease-linear drop-shadow md:hover:-translate-y-2 md:drop-shadow-2xl md:hover:drop-shadow-3xl bg-gradient-to-t from-white dark:from-slate-800 group">
 		                    <div>	
 			                    <Image 
 				                    src="https://images.unsplash.com/photo-1485700281629-290c5a704409?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" 
@@ -64,7 +65,7 @@ export default function Hero () {
 		                            </a>
 		                        </div>
 		                    </div>
-		                </div>
+		                </motion.div>
 		            </div>
 		        </div>
 		    </section>

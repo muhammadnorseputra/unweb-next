@@ -1,5 +1,6 @@
 import Router from "next/router";
 import NProgress from "nprogress";
+import 'nprogress/nprogress.css'
 
 let timer;
 let state;
@@ -12,7 +13,7 @@ function load() {
   }
 
   state = "loading";
-
+  
   timer = setTimeout(function () {
     NProgress.start();
   }, delay); // only show progress bar if it takes longer than the delay

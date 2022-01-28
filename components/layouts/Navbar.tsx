@@ -69,7 +69,7 @@ export default function Navbar() {
             <div className="flex justify-between items-center">
                 <div className="mr-3">
                     <button onClick={switchTheme} type="button" className="border-2 border-b-4 border-black p-2 rounded-md dark:border-pink-500">
-                        <motion.div whileHover={{scale: 1.2, rotate: -90}}>
+                        <motion.div whileTap={{scale: 1, rotate: 90}} whileHover={{scale: 1.2, rotate: -90}}>
                         {theme === 'dark' ? <IconSun /> : <IconMoon />}
                         </motion.div>
                     </button>
