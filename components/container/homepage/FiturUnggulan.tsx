@@ -1,3 +1,5 @@
+import { SparklesIcon } from '@heroicons/react/solid'
+
 export default function FiturUnggulan() {
 	return (
 		<>
@@ -5,9 +7,7 @@ export default function FiturUnggulan() {
 		    <section>
 		        <div className="container mx-auto">
 		            <div className="flex flex-col lg:flex-row items-center justify-center">
-		                <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-24 mb-8 sm:mr-5 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-		                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-		                </svg>
+		                <SparklesIcon className="h-24 w-24 mb-8 sm:mr-5 text-yellow-400" />
 		                <h1 className="text-3xl text-center lg:text-4xl font-bold sub-masking font-lora mb-5">Fitur Menarik</h1>
 		            </div>
 		            <div className="flex flex-col lg:flex-row items-start justify-around my-10 gap-x-10">

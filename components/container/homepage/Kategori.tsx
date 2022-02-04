@@ -31,7 +31,7 @@ export default function Kategori () {
 		            	{
 		            		KategoriList.map((d, index) => {
 		            			return (
-		            				<Items title={d.title} slug={`categorys/${d.title.toLowerCase()}`} ImgSource={d.img} />
+		            				<Items key={d.title} title={d.title} slug={`categorys/${d.title.toLowerCase()}`} ImgSource={d.img} />
 		            			)
 		            		})
 		            	}

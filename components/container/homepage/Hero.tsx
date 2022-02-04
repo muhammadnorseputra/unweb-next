@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import { HeartIcon, CollectionIcon, ChatAltIcon } from '@heroicons/react/solid'
+import { HeartIcon, CollectionIcon, ChatAltIcon, ExternalLinkIcon } from '@heroicons/react/solid'
 
 export default function Hero () {
 	return (
@@ -16,14 +16,14 @@ export default function Hero () {
 		                    <HeartIcon className="h-6 w-6 mr-2 animate-pulse fill-red-500" />
 		                    Hi, Selamat datang di unweb.id
 		                </motion.p>
-		                <h1 className="group text-3xl sm:text-4xl md:text-5xl capitalize font-bold font-black leading-normal lg:leading-snug text-gray-800 dark:text-white font-asap select-none">
+		                <motion.h1 initial={{opacity: 0, translateX: -50}} animate={{opacity: 1, translateX: 0}} className="group text-3xl sm:text-4xl md:text-5xl capitalize font-bold font-black leading-normal lg:leading-snug text-gray-800 dark:text-white font-asap select-none">
 		                    Buat <span className="group-hover:underline decoration-[6px] underline-offset-8 text-pink-800 animate-pulse">undangan pernikahan</span> <br />
 		                    jadi lebih mudah dan praktis.
-		                </h1>
-		                <p className="select-none leading-loose mt-5 text-gray-600 dark:text-gray-200 font-asap">
+		                </motion.h1>
+		                <motion.p initial={{opacity: 0, translateY: 50}} animate={{opacity: 1, translateY: 0}} className="select-none leading-loose mt-5 text-gray-600 dark:text-gray-200 font-asap">
 		                    Buat undangan kini lebih mudah, dengan unweb.id anda bisa membuat undangan online dimana saja dan kapan saja. Kami siap membantu anda pada hari yang spesial tanpa ada batasan waktu dan tempat.
-		                </p>
-		                <div className="flex justify-start items-center">
+		                </motion.p>
+		                <motion.div initial={{opacity: 0, translateX: 50}} animate={{opacity: 1, translateX: 0}} className="flex justify-start items-center">
 		                	<Link href="#">
 		                    <a className="border-2 text-black border-b-4 rounded-md border-black bg-white px-5 py-3 inline-flex items-center mt-8 mr-3 transition duration-250 hover:-translate-y-0.5 hover:drop-shadow-xl">
 		                        <span className="mr-3 truncate">Lihat Katalog</span>
@@ -36,8 +36,7 @@ export default function Hero () {
 		                        <ChatAltIcon className="w-6" />
 		                    </a>
 		                    </Link>
-
-		                </div>
+		                </motion.div>
 		            </div>
 		            <div className="flex-grow w-full md:w-8/12 xl:w-6/12">
 		                <motion.div initial={{opacity: 0.6, scale: 0.90, translateY: 50}} transition={{duration: 0.3}} animate={{opacity: 1, scale: 1, translateY: 0}} className="flex flex-col rounded-xl xl:h-96 overflow-hidden border-2 border-white dark:border-gray-300 transition duration-150 cursor-pointer transition duration-150 ease-linear drop-shadow md:hover:-translate-y-2 md:drop-shadow-2xl md:hover:drop-shadow-3xl bg-gradient-to-t from-white dark:from-slate-800 group">
@@ -58,11 +57,11 @@ export default function Hero () {
 		                            <p className="font-bold text-xl text-indigo-500">Putra & Nimah</p>
 		                        </div>
 		                        <div>
-		                            <a href="#" className="animate-bounce">
-		                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 stroke-indigo-600" fill="none" viewBox="0 0 24 24" stroke="none">
-		                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
-		                                </svg>
-		                            </a>
+		                        	<Link href="#">
+			                            <a className="animate-bounce">
+			                                <ExternalLinkIcon className="h-8 w-8"/>
+			                            </a>
+		                            </Link>
 		                        </div>
 		                    </div>
 		                </motion.div>
