@@ -7,7 +7,7 @@ export default function Flow () {
 		    <section>
 		        <div className="container mx-auto">
 		            <div className="bg-gradient-to-b from-white to-sky-50 dark:border-t dark:border-slate-600 dark:from-slate-700 dark:to-slate-900 h-auto rounded-2xl p-5">
-		                <div className="grid grid-flow-row sm:grid-rows-2 sm:grid-cols-3 gap-y-10 font-asap">
+		                <div className="grid grid-flow-row grid-flow-row sm:grid-rows-2 sm:grid-cols-3 gap-y-10 font-asap">
 		                	<Item no={1} title="Nama Domain" diviBorder={true}>
 		                		Bingung pilih nama domain? pake namamu dan pasangan aja kayak gini.
                                 <br className="mb-3" />
